@@ -11,7 +11,7 @@ public class AntiPatternOnlyIf {
 	 * 구문 (statement)
 	 * 자바 연산식에서 3가지 종류의 구문으로 나뉜다
 	 * 1. 조건문
-	 * 		if, if-else, siwtch
+	 * 		if, if-else, switch
 	 * 2. 반복문
 	 * 		while, do-while, for
 	 * 3. 기타구문

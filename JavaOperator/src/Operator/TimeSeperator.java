@@ -2,7 +2,7 @@ package Operator;
 
 import java.util.Scanner;
 
-public class TimeSeperate {
+public class TimeSeperator {
 	public static void main(String[] args) {
 		/*
 		 * 입력받은 초를 시간 분 초로 환산하는 프로그램
