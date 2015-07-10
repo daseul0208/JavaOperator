@@ -1,30 +1,17 @@
-package ifCondition;
+package condition;
 
 import java.util.Scanner;
-
-import org.omg.Messaging.SyncScopeHelper;
-
 /*
- * @ Date : 2015.07.09
+ * @ Date : 2015.07.10
  * @ Author : me
- * @ Story : if-else 예제
- * 		프로그램을 하나 개발해야 합니다.
- * 	오더는 
- * 	학생	국어 	영어	수학	총점	평균	합격여부
- * ----------------------------------------------------------
- * (홍길동) (90)	(90)	(90)	(270)	(90)	  (장학생)
- * 
- * 평균이 90점 이상이면 장학생
- * 평균이 70점 이상 - 90점 미만이면 합격
- * 평균이 70점 미만이면 불합격
- * */		
-public class CalcAvgMain {
-	public static void main(String[] args) {
-		
+ * @ Story : Switch 예제(합격여부 구하기)
+ */
+public class SwitchAvg {
+	public void calc() {
 		// 선언부
 		String name = "",msg="";
 		// 정수는 연산을 해야 되서 int 타입으로 정해져야 한다.
-		int kor=0, eng=0, math=0, sum=0, avg=0;
+		int kor=0, eng=0, math=0, sum=0, avg=0, flag=0;
 		Scanner scanner = new Scanner(System.in);
 		
 		// 연산부
@@ -38,7 +25,8 @@ public class CalcAvgMain {
 		math = scanner.nextInt();
 		sum = kor + eng + math;
 		avg = (int)sum/3; // 다운캐스팅 . 소수점 이하 버림
-		
+		// 아래부분을 switch-case로 전환
+		/*
 		if (avg >= 90) {
 			msg = "장학생";
 		} else if((avg >= 70)&&(avg < 90)){
@@ -46,19 +34,17 @@ public class CalcAvgMain {
 		}else{
 			msg = "불합격";
 		}
+		*/
+		
+		switch (avg/10) {
+		case 10:case 9: msg="장학생"; break;
+		case 8:case 7: msg="합격"; break;
+		default: msg="불합격"; break;
+		}
+		
 		// 출력부
 		System.out.println("학생\t국어\t영어\t수학\t총점\t평균\t합격여부");
 		System.out.println("---------------------------------------------------------");
 		System.out.println(name+"\t"+kor+"\t"+eng+"\t"+math+"\t"+sum+"\t"+avg+"\t"+msg);
 	}
-
-
-		
-	
-		
-		
-		
-		
-		
-	}
-
+}
