@@ -1,5 +1,6 @@
 package controller;
 
+import Loop.EvenoddSum;
 import condition.ArithmeticCalc;
 import condition.CalAvg;
 import condition.ManOrWoman;
@@ -15,9 +16,13 @@ public class OperatorController {
 	//	calc.calc();
 		// 2015.07.10 스위치 성적 계산기
 		SwitchAvg avg2 = new SwitchAvg();
-		avg2.calc();
+	//	avg2.calc();
 		ManOrWoman manOrWoman = new ManOrWoman();
-		manOrWoman.ssn(); // ssn() 원 클래스의 메소드 이름이다
+	//	manOrWoman.ssn(); // ssn() 원 클래스의 메소드 이름이다
+		
+		EvenoddSum evenoddSum = new EvenoddSum();
+		evenoddSum.calc(); // 객체가 메소드를 호출한다
+		
 	}
 }
 
